@@ -55,21 +55,21 @@ export default function Home() {
     turnkey: {
       title: "Turnkey Luxury Execution",
       grade: "A++ Commercial Grade Anti-Termite Marine Plywood",
-      hardware: "Hafele / Blum Premium Soft-Shut Hydraulics",
+      hardware: "Premium Custom Soft-Shut Sleek Hydraulics",
       timeframe: "45 Working Days Handover Guarantee",
       assurance: "10-Year Site Warping & Structural Warranty",
       description: "Our Turnkey Executive workflow manages your entire residential unit from standard raw concrete shell into a fully realized luxury residence. This encompasses architectural design, civil layouts, electrical sync, concealed lighting, premium wallpaper backdrop layers, and designer wood finishes.",
       specs: [
         { label: "Skeletal Masonry & Framing", value: "Reinforced alloy channels plus premium water-resistant partition structures" },
         { label: "Electrical Distribution Sync", value: "Concealed fire-retardant multi-strand copper conduits with gold-trimmed plates" },
-        { label: "Bespoke Paneling & Veneer", value: "Imported teak veneers paired with hand-polished mirror coatings" },
+        { label: "Bespoke Paneling & Veneer", value: "Premium teak veneers paired with hand-polished mirror coatings" },
         { label: "Execution Precision Protocol", value: "Daily laser level measurements to guarantee strictly flush alignments" }
       ]
     },
     space: {
       title: "Advanced Space Optimization",
       grade: "Heavy-Duty Lightweight Premium Alum-alloy Frameworks",
-      hardware: "Italian Custom Slide-Track & Flush Partition Engines",
+      hardware: "Bespoke Premium Slide-Track & Flush Partition Systems",
       timeframe: "30 Working Days Installation Cycle",
       assurance: "5-Year Mechanical Slider Calibration Guarantee",
       description: "Mastering micro-architectures. We optimize 1 BHK, 2 BHK & 3 BHK flats across Kamothe and wider Panvel using innovative structural layouts, folding workspace panels, slide-away library frames, and multi-functional space solutions designed for optimal modern ergonomics.",
@@ -83,7 +83,7 @@ export default function Home() {
     kitchen: {
       title: "Custom Modular Kitchens",
       grade: "Boiling Water Resistant (BWR) Gurjan Core Marine Ply",
-      hardware: "Hettich InnoTech Double-Wall Drawers & Soft-Close Slides",
+      hardware: "Premium Heavy-Duty Anti-Noise Soft-Close Drawer Systems",
       timeframe: "21 Days Precision Assembly & Fitting",
       assurance: "Lifetime Hardware & Drawer Runner Warranty",
       description: "Elite culinary workstations. Built using custom anti-moisture engineered wood cabinetry, gold-profile concealed Gola layouts, custom anti-bacterial quartz workspace surfaces, and fully integrated cooking systems tailored specifically for heavy Indian culinary patterns.",
@@ -134,7 +134,6 @@ export default function Home() {
             <nav className="hidden md:flex items-center space-x-8 text-xs tracking-[0.2em] text-white/80 uppercase font-medium">
               <a href="#services" className="hover:text-[#D4AF37] transition-colors duration-300">Operations</a>
               <a href="#reviews" className="hover:text-[#D4AF37] transition-colors duration-300">Google Reviews</a>
-              <a href="#cabinet" className="hover:text-[#D4AF37] transition-colors duration-300">3D Cabinet</a>
               <a href="#contact" className="hover:text-[#D4AF37] transition-colors duration-300">Consultation</a>
             </nav>
 
@@ -291,7 +290,7 @@ export default function Home() {
                   Custom Modular Kitchens
                 </h3>
                 <p className="mt-2 text-xs text-neutral-400 font-light line-clamp-2">
-                  High-durability BWR marine plywood hubs, acrylic shutters, German soft-close Tandem drawer slides.
+                  High-durability BWR marine plywood hubs, acrylic shutters, premium soft-close Tandem drawer slides.
                 </p>
               </button>
 
@@ -555,177 +554,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. THE 3D VIDEO CABINET (Cinematic Walkthroughs) */}
-      <section id="cabinet" className="relative py-24 px-4 sm:px-6 bg-[#050505] border-t border-[#D4AF37]/15">
-        
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#D4AF37]/3 blur-[100px] rounded-full pointer-events-none z-0"></div>
-
-        <div className="relative z-10 max-w-7xl mx-auto">
-          
-          {/* Header Block */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-neutral-800/80 pb-8">
-            <div>
-              <span className="text-xs font-mono font-bold tracking-[0.3em] text-[#D4AF37] uppercase block mb-3">
-                03. Spatial Showcase
-              </span>
-              <h2 className="text-3xl sm:text-5xl font-serif text-white tracking-tight uppercase">
-                The 3D Video Cabinet
-              </h2>
-            </div>
-            <p className="mt-4 md:mt-0 max-w-md text-sm text-neutral-400 font-light leading-relaxed">
-              Experience detailed walkthroughs of real material compositions and architectural layouts drafted by our Kamothe studio.
-            </p>
-          </div>
-
-          {/* Grid of 3 Dedicated Cabinet Video Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            {/* Card 1: Living Lounge */}
-            <div className="rounded-xl overflow-hidden bg-[#121212]/90 border border-neutral-800/80 hover:border-[#D4AF37]/60 group transition-all duration-500 hover:shadow-[0_8px_30px_rgba(212,175,55,0.06)] flex flex-col justify-between">
-              
-              {/* Immersive Video Block */}
-              <div className="relative aspect-video w-full bg-black overflow-hidden border-b border-neutral-900">
-                <video 
-                  src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c05c084a8c991f8682a39fc697cf8c22&profile_id=139&oauth2_token_id=57447761" 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                ></video>
-                <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[8px] font-mono text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/20">
-                  Unit walkthrough
-                </div>
-              </div>
-
-              {/* Technical Specifications Blueprint Panel below video */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4 border-b border-neutral-800 pb-3">
-                  <h3 className="font-serif text-lg font-bold text-white uppercase tracking-wide">Living Lounge</h3>
-                  <span className="text-3xs font-mono text-[#D4AF37] uppercase tracking-[0.2em] px-2 py-0.5 border border-[#D4AF37]/35 rounded bg-[#D4AF37]/10">ACTIVE BLUEPRINT</span>
-                </div>
-
-                {/* Technical Stats Sheets */}
-                <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-2xs font-mono">
-                  <div className="flex flex-col border-r border-neutral-900 pr-2">
-                    <span className="text-neutral-500 uppercase tracking-wide">Volume Area</span>
-                    <span className="text-white font-semibold mt-0.5">550 SQFT Floor</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-neutral-500 uppercase tracking-wide">Site Sector</span>
-                    <span className="text-white font-semibold mt-0.5">Kamothe, Panvel</span>
-                  </div>
-                  <div className="flex flex-col border-r border-neutral-900 pr-2 pt-1 border-t border-neutral-900/60 mt-1">
-                    <span className="text-neutral-500 uppercase tracking-wide">Design Vibe</span>
-                    <span className="text-white font-semibold mt-0.5">Modern Luxury</span>
-                  </div>
-                  <div className="flex flex-col pt-1 border-t border-neutral-900/60 mt-1">
-                    <span className="text-neutral-500 uppercase tracking-wide">Aesthetic Finishes</span>
-                    <span className="text-[#D4AF37] font-semibold mt-0.5">Champagne & Wood</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Minimalist Kitchen */}
-            <div className="rounded-xl overflow-hidden bg-[#121212]/90 border border-neutral-800/80 hover:border-[#D4AF37]/60 group transition-all duration-500 hover:shadow-[0_8px_30px_rgba(212,175,55,0.06)] flex flex-col justify-between">
-              
-              {/* Immersive Video Block */}
-              <div className="relative aspect-video w-full bg-black overflow-hidden border-b border-neutral-900">
-                <video 
-                  src="https://player.vimeo.com/external/435674703.sd.mp4?s=6f414e1a06752dc34df3fae68b1ee3f65e236687&profile_id=139&oauth2_token_id=57447761" 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                ></video>
-                <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[8px] font-mono text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/20">
-                  German layout
-                </div>
-              </div>
-
-              {/* Technical Specifications Blueprint Panel below video */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4 border-b border-neutral-800 pb-3">
-                  <h3 className="font-serif text-lg font-bold text-white uppercase tracking-wide">Minimalist Kitchen</h3>
-                  <span className="text-3xs font-mono text-[#D4AF37] uppercase tracking-[0.2em] px-2 py-0.5 border border-[#D4AF37]/35 rounded bg-[#D4AF37]/10">ACTIVE BLUEPRINT</span>
-                </div>
-
-                {/* Technical Stats Sheets */}
-                <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-2xs font-mono">
-                  <div className="flex flex-col border-r border-neutral-900 pr-2">
-                    <span className="text-neutral-500 uppercase tracking-wide">Volume Area</span>
-                    <span className="text-white font-semibold mt-0.5">220 SQFT Floor</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-neutral-500 uppercase tracking-wide">Site Sector</span>
-                    <span className="text-white font-semibold mt-0.5">Sector 6, Kamothe</span>
-                  </div>
-                  <div className="flex flex-col border-r border-neutral-900 pr-2 pt-1 border-t border-neutral-900/60 mt-1">
-                    <span className="text-neutral-500 uppercase tracking-wide">Design Vibe</span>
-                    <span className="text-white font-semibold mt-0.5">Minimalist German</span>
-                  </div>
-                  <div className="flex flex-col pt-1 border-t border-neutral-900/60 mt-1">
-                    <span className="text-neutral-500 uppercase tracking-wide">Aesthetic Finishes</span>
-                    <span className="text-[#D4AF37] font-semibold mt-0.5">Acrylic Matte White</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3: Master Suite */}
-            <div className="rounded-xl overflow-hidden bg-[#121212]/90 border border-neutral-800/80 hover:border-[#D4AF37]/60 group transition-all duration-500 hover:shadow-[0_8px_30px_rgba(212,175,55,0.06)] flex flex-col justify-between">
-              
-              {/* Immersive Video Block */}
-              <div className="relative aspect-video w-full bg-black overflow-hidden border-b border-neutral-900">
-                <video 
-                  src="https://player.vimeo.com/external/403848777.sd.mp4?s=d75b34918e7d23f73ce02dfcbd08381dd006c6e7&profile_id=139&oauth2_token_id=57447761" 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                ></video>
-                <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[8px] font-mono text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/20">
-                  Bespoke suite
-                </div>
-              </div>
-
-              {/* Technical Specifications Blueprint Panel below video */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4 border-b border-neutral-800 pb-3">
-                  <h3 className="font-serif text-lg font-bold text-white uppercase tracking-wide">Master Suite</h3>
-                  <span className="text-3xs font-mono text-[#D4AF37] uppercase tracking-[0.2em] px-2 py-0.5 border border-[#D4AF37]/35 rounded bg-[#D4AF37]/10">ACTIVE BLUEPRINT</span>
-                </div>
-
-                {/* Technical Stats Sheets */}
-                <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-2xs font-mono">
-                  <div className="flex flex-col border-r border-neutral-900 pr-2">
-                    <span className="text-neutral-500 uppercase tracking-wide">Volume Area</span>
-                    <span className="text-white font-semibold mt-0.5">380 SQFT Floor</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-neutral-500 uppercase tracking-wide">Site Sector</span>
-                    <span className="text-white font-semibold mt-0.5">Kamothe Unit C</span>
-                  </div>
-                  <div className="flex flex-col border-r border-neutral-900 pr-2 pt-1 border-t border-neutral-900/60 mt-1">
-                    <span className="text-neutral-500 uppercase tracking-wide">Design Vibe</span>
-                    <span className="text-white font-semibold mt-0.5">Grand Chateaux</span>
-                  </div>
-                  <div className="flex flex-col pt-1 border-t border-neutral-900/60 mt-1">
-                    <span className="text-neutral-500 uppercase tracking-wide">Aesthetic Finishes</span>
-                    <span className="text-[#D4AF37] font-semibold mt-0.5">Suede & Brass Inlays</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
       {/* 5. HIGH-CONVERTING CONTACT & API HANDOFF */}
       <section id="contact" className="relative py-24 px-4 sm:px-6 bg-[#121212] border-t border-[#D4AF37]/15">
         
@@ -736,7 +564,7 @@ export default function Home() {
           
           <div className="text-center mb-16">
             <span className="text-xs font-mono font-bold tracking-[0.3em] text-[#D4AF37] uppercase block mb-3">
-              04. Elite Procurement
+              03. Elite Procurement
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-white tracking-tight uppercase">
               Initiate Design Draft

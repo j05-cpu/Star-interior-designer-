@@ -14,11 +14,11 @@ export async function GET(req: NextRequest) {
 
   let resolvedPath = "";
 
-  if (fs.existsSync(rootPath)) {
+  if (fs.existsSync(rootPath) && fs.statSync(rootPath).size > 100) {
     resolvedPath = rootPath;
-  } else if (fs.existsSync(publicPath)) {
+  } else if (fs.existsSync(publicPath) && fs.statSync(publicPath).size > 100) {
     resolvedPath = publicPath;
-  } else if (fs.existsSync(assetsPath)) {
+  } else if (fs.existsSync(assetsPath) && fs.statSync(assetsPath).size > 100) {
     resolvedPath = assetsPath;
   }
 
@@ -45,7 +45,7 @@ export async function GET(req: NextRequest) {
       // Create a response with readable stream
       // We can cast the fileStream to any body Next.js accepts (ReadableStream)
       return new NextResponse(fileStream as any, {
-        status: 260, // Partial Content
+        status: 206, // Partial Content
         statusText: "Partial Content",
         headers,
       });
