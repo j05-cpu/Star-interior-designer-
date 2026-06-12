@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), ui-serif, serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --color-gold: #D4AF37;
+  --color-gold-hover: #F3CD57;
+  --color-gold-light: #F2E3C6;
+  --color-obsidian: #050505;
+  --color-charcoal: #121212;
+}
+
+@keyframes slow-pan {
+  0% { transform: scale(1.05) translate(0, 0); }
+  50% { transform: scale(1.1) translate(-1%, -1%); }
+  100% { transform: scale(1.05) translate(0, 0); }
+}
+
+@keyframes gold-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.02); }
+}
+
+.animate-slow-pan {
+  animation: slow-pan 20s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: float-gentle 6s infinite ease-in-out;
+}
+
+.animate-glow {
+  animation: glow-pulse 3s infinite ease-in-out;
+}
+
+/* Glassmorphism utility classes */
+.glass-header {
+  background: rgba(5, 5, 5, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+}
+
+.glass-card {
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.glass-card-gold {
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.champagne-gradient-text {
+  background: linear-gradient(135deg, #FFF 30%, #F2E3C6 60%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
