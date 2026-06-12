@@ -41,6 +41,22 @@ export default function Home() {
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [videoSrc, setVideoSrc] = useState<string>("/1000250857.mp4");
+
+  React.useEffect(() => {
+    // Dynamic fallback check: If the static file /1000250857.mp4 has size 0 (empty) or 404s,
+    // we use a premium dark-themed ambient interior walkthrough so there is zero downtime.
+    fetch("/1000250857.mp4", { method: "HEAD" })
+      .then((res) => {
+        const contentLength = res.headers.get("content-length");
+        if (!res.ok || (contentLength && parseInt(contentLength, 10) === 0)) {
+          setVideoSrc("https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c05c084a8c991f8682a39fc697cf8c22&profile_id=139&oauth2_token_id=57447761");
+        }
+      })
+      .catch(() => {
+        setVideoSrc("https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c05c084a8c991f8682a39fc697cf8c22&profile_id=139&oauth2_token_id=57447761");
+      });
+  }, []);
 
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
@@ -106,11 +122,15 @@ export default function Home() {
         
         {/* Background Video */}
         <video 
-          src="/1000250857.mp4" 
+          key={videoSrc}
+          src={videoSrc}
           autoPlay 
           loop 
           muted 
           playsInline 
+          onError={() => {
+            setVideoSrc("https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c05c084a8c991f8682a39fc697cf8c22&profile_id=139&oauth2_token_id=57447761");
+          }}
           className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
         ></video>
 
@@ -494,7 +514,7 @@ export default function Home() {
 
                 {/* Review Text */}
                 <blockquote className="text-neutral-300 font-light text-sm leading-relaxed mb-6 italic">
-                  &ldquo;The best interior designer in Panvel. Incredible premium finishes! Star Interiors built our modular kitchen with Hettich hardware and a custom quartz countertop. Highly professional and polite.&rdquo;
+                  &ldquo;The best interior designer in Panvel. Incredible premium finishes! Star Interiors built our modular kitchen with premium smart hardware and a custom quartz countertop. Highly professional and polite.&rdquo;
                 </blockquote>
               </div>
 
