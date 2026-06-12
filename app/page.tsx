@@ -41,22 +41,6 @@ export default function Home() {
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [videoSrc, setVideoSrc] = useState<string>("/1000250857.mp4");
-
-  React.useEffect(() => {
-    // Dynamic fallback check: If the static file /1000250857.mp4 has size 0 (empty) or 404s,
-    // we use a premium dark-themed ambient interior walkthrough so there is zero downtime.
-    fetch("/1000250857.mp4", { method: "HEAD" })
-      .then((res) => {
-        const contentLength = res.headers.get("content-length");
-        if (!res.ok || (contentLength && parseInt(contentLength, 10) === 0)) {
-          setVideoSrc("https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c05c084a8c991f8682a39fc697cf8c22&profile_id=139&oauth2_token_id=57447761");
-        }
-      })
-      .catch(() => {
-        setVideoSrc("https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c05c084a8c991f8682a39fc697cf8c22&profile_id=139&oauth2_token_id=57447761");
-      });
-  }, []);
 
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
@@ -121,22 +105,11 @@ export default function Home() {
       <section id="hero" className="relative h-screen w-full overflow-hidden flex flex-col justify-between">
         
         {/* Background Video */}
-        <video 
-          key={videoSrc}
-          src={videoSrc}
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          onError={() => {
-            setVideoSrc("https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c05c084a8c991f8682a39fc697cf8c22&profile_id=139&oauth2_token_id=57447761");
-          }}
-          className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
-        ></video>
+        <video src="/1000250857.mp4" autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"></video>
 
-        {/* Multi-layered dark linear vignette overlay for absolute text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/45 to-[#050505] z-10 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 z-10 pointer-events-none"></div>
+        {/* Semi-transparent black overlay gradient & vignette for optimal text readability while keeping video visible */}
+        <div className="absolute inset-0 bg-black/55 z-10 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-[#050505] z-10 pointer-events-none"></div>
 
         {/* Header Block floating on top of the hero backdrop (z-20) */}
         <header className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 pt-5">
@@ -183,31 +156,31 @@ export default function Home() {
 
         {/* Hero Central Typography (z-20) */}
         <div className="relative z-20 flex-grow flex flex-col justify-center items-center text-center px-4 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 border border-[#D4AF37]/30 bg-black/50 backdrop-blur-md px-3.5 py-1.5 rounded-full mb-6">
-            <span className="inline-block w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-            <span className="text-[10px] sm:text-xs font-mono font-medium tracking-[0.25em] text-[#D4AF37] uppercase">
+          <div className="inline-flex items-center gap-2 border border-[#D4AF37]/30 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full mb-6">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <span className="text-[9px] font-mono font-medium tracking-[0.25em] text-[#D4AF37] uppercase">
               Premium Interior Masterpieces
             </span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight text-white mb-6 leading-[1.05] champagne-gradient-text uppercase">
-            Modern & Classy<br />Interiors That<br />Feel Like Home
+          <h1 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white mb-4 leading-[1.15] champagne-gradient-text uppercase">
+            Modern & Classy Interiors
           </h1>
 
-          <p className="text-xs sm:text-base md:text-lg text-neutral-300/90 font-light max-w-2xl mx-auto tracking-wide mb-8 sm:mb-10 leading-relaxed">
-            By combining raw industrial durability with metallic champagne elegance, <span className="text-[#D4AF37] font-semibold">Gaurav Kesare</span> designs spaces that convey deep comfort and luxury.
+          <p className="text-xs sm:text-sm text-neutral-300/90 font-light max-w-lg mx-auto tracking-wide mb-8 leading-relaxed">
+            Crafting premium spaces that convey deep comfort and luxury.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center px-4 max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row items-center gap-3 w-full justify-center px-4 max-w-md mx-auto">
             <a 
               href="#contact" 
-              className="w-full sm:w-auto text-center px-6 py-3.5 sm:px-8 sm:py-4 bg-[#D4AF37] hover:bg-[#F3CD57] text-[#050505] text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] rounded-md transition-all duration-300 shadow-[0_4px_25px_rgba(212,175,55,0.3)] hover:shadow-[0_4px_35px_rgba(212,175,55,0.5)]"
+              className="w-full sm:w-auto text-center px-5 py-2.5 bg-[#D4AF37] hover:bg-[#F3CD57] text-[#050505] text-[10px] font-bold uppercase tracking-[0.15em] rounded-md transition-all duration-300 shadow-[0_4px_20px_rgba(212,175,55,0.2)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.4)]"
             >
               Book Consultation
             </a>
             <a 
               href="#services" 
-              className="w-full sm:w-auto text-center px-6 py-3.5 sm:px-8 sm:py-4 bg-black/45 backdrop-blur-sm sm:bg-transparent hover:bg-neutral-900/60 text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] rounded-md border border-white/20 hover:border-[#D4AF37]/50 transition-all duration-300"
+              className="w-full sm:w-auto text-center px-5 py-2.5 bg-black/45 backdrop-blur-sm sm:bg-transparent hover:bg-neutral-900/60 text-white text-[10px] font-bold uppercase tracking-[0.15em] rounded-md border border-white/20 hover:border-[#D4AF37]/50 transition-all duration-300"
             >
               See Deliverables
             </a>
