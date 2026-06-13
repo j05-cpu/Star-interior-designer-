@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 
 // Business Details constants
 const BUSINESS = {
-  companyName: "STAR INTERIORS By GAURAV KESARE",
-  phoneWhatsApp: "+91 77384 13372",
-  whatsappUrl: "https://wa.me/917738413372",
+  companyName: "JANNAT INDOOR SOLUTION",
+  phoneWhatsApp: "+91 88987 87895",
+  whatsappUrl: "https://wa.me/918898787895",
   address: "SHOP NO- 07, Ashapura Residency, PLOT NO - 25, near MNR SCHOOL, Sector 6, Kamothe, Panvel, Maharashtra 410209",
   shortAddress: "SHOP NO- 07, Ashapura Residency, Sector 6, Kamothe, Panvel - 410209"
 };
@@ -115,11 +115,8 @@ export default function Home() {
         <header className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 pt-5">
           <div className="glass-header rounded-xl sm:rounded-2xl px-4 sm:px-8 py-4 flex items-center justify-between border border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
             <div className="flex flex-col">
-              <span className="font-serif tracking-[0.2em] text-white text-base sm:text-lg md:text-xl font-bold uppercase">
-                STAR INTERIORS
-              </span>
-              <span className="text-[9px] tracking-[0.18em] text-[#D4AF37] uppercase font-light">
-                By GAURAV KESARE
+              <span className="font-serif tracking-[0.15em] text-white text-base sm:text-lg md:text-xl font-bold uppercase">
+                JANNAT INDOOR SOLUTION
               </span>
             </div>
 
@@ -365,7 +362,7 @@ export default function Home() {
                   rel="noopener noreferrer" 
                   className="w-full xs:w-auto text-center border border-neutral-800 hover:border-white/40 text-white text-2xs font-bold px-6 py-3 rounded uppercase tracking-[0.15em] transition-all duration-300"
                 >
-                  Query with Gaurav Kesare
+                  Direct WhatsApp Query
                 </a>
               </div>
 
@@ -446,7 +443,7 @@ export default function Home() {
 
                 {/* Review Text */}
                 <blockquote className="text-neutral-300 font-light text-sm leading-relaxed mb-6 italic">
-                  &ldquo;Gaurav and his team transformed our Kamothe apartment into a masterpiece. From initial skeletal layouts to final champagne gold accents, the turnkey execution was flawlessly on-schedule. Unbelievable finish!&rdquo;
+                  &ldquo;Jannat Indoor Solution transformed our Kamothe apartment into a masterpiece. From initial skeletal layouts to final champagne gold accents, the turnkey execution was flawlessly on-schedule. Unbelievable finish!&rdquo;
                 </blockquote>
               </div>
 
@@ -487,7 +484,7 @@ export default function Home() {
 
                 {/* Review Text */}
                 <blockquote className="text-neutral-300 font-light text-sm leading-relaxed mb-6 italic">
-                  &ldquo;The best interior designer in Panvel. Incredible premium finishes! Star Interiors built our modular kitchen with premium smart hardware and a custom quartz countertop. Highly professional and polite.&rdquo;
+                  &ldquo;The best interior designer in Panvel. Incredible premium finishes! Jannat Indoor Solution built our modular kitchen with premium smart hardware and a custom quartz countertop. Highly professional and polite.&rdquo;
                 </blockquote>
               </div>
 
@@ -527,7 +524,7 @@ export default function Home() {
 
                 {/* Review Text */}
                 <blockquote className="text-neutral-300 font-light text-sm leading-relaxed mb-6 italic">
-                  &ldquo;Space optimization at its finest. Our 2 BHK in Kamothe feels like a luxury hotel suite. Gaurav Kesare&apos;s design language integrates warm premium cove lighting and wood veneer flawlessly.&rdquo;
+                  &ldquo;Space optimization at its finest. Our 2 BHK in Kamothe feels like a luxury hotel suite. Jannat Indoor Solution&apos;s design language integrates warm premium cove lighting and wood veneer flawlessly.&rdquo;
                 </blockquote>
               </div>
 
@@ -696,7 +693,7 @@ export default function Home() {
                   <h3 className="text-2xl font-serif text-white uppercase tracking-wider mb-3">CONGRATULATIONS, {formData.name.split(' ')[0]}!</h3>
                   <p className="text-[#D4AF37] font-mono text-xs uppercase tracking-[0.15em] mb-4">Lead ID Verified & Active</p>
                   <p className="text-sm text-neutral-400 font-light max-w-md mx-auto leading-relaxed mb-6">
-                    Gaurav Kesare and our engineering design leads have received your request for <span className="text-white font-semibold">{formData.category}</span> at <span className="text-white font-semibold">{formData.location}</span>. We will call you on <span className="text-white font-semibold">{formData.phone}</span> within 2 hours.
+                    Jannat Indoor Solution and our engineering design leads have received your request for <span className="text-white font-semibold">{formData.category}</span> at <span className="text-white font-semibold">{formData.location}</span>. We will call you on <span className="text-white font-semibold">{formData.phone}</span> within 2 hours.
                   </p>
                   <button 
                     onClick={() => setIsSubmitted(false)} 
@@ -743,7 +740,7 @@ export default function Home() {
               Kamothe, Panvel, Maharashtra 410209 (Near MNR School)
             </p>
             <p className="text-neutral-600 text-3xs tracking-widest uppercase">
-              STAR INTERIORS BY GAURAV KESARE © 2026. ALL RIGHTS RESERVED. TRADEMARKED WORKFLOW.
+              JANNAT INDOOR SOLUTION © 2026. ALL RIGHTS RESERVED. TRADEMARKED WORKFLOW.
             </p>
           </div>
 

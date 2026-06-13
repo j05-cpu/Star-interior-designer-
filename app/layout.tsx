@@ -15,8 +15,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'STAR INTERIORS By GAURAV KESARE | Luxury Home Designers',
-  description: 'Modern & Classy Interiors That Feel Like Home. Bespoke turnkey luxury execution, modular kitchens, and space optimization by Gaurav Kesare.',
+  title: 'JANNAT INDOOR SOLUTION | Luxury Home Designers',
+  description: 'Modern & Classy Interiors That Feel Like Home. Bespoke turnkey luxury execution, modular kitchens, and space optimization.',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
